@@ -1,9 +1,10 @@
 1. Tại sao set file permission mode là 0777 nhưng khi check thì lại là 0775?
 Để chống lại việc ghi, thao tác thay đổi nội dung file bất kì định dạng nào trong hệ thống
 nên khi 1 file được tạo ra nó sẽ được set với những giá trị permision mặc định và sau đó &~ với mặt nạ (umask)
-để tránh tình trạng ghi file của những other users ngoài user và group.
+để tránh tình trạng ghi file của những other users ngoài user và group. 
 Nếu file có thực thi được thì có thêm quyền x.
-Không thì chỉ có wr.
+Không thì chỉ có wr. => ACL
+
 Và cũng chính vì lí do đó khi ta thực hiện lệnh system call open() mặc dù ta có set others full toàn quyền đi nữa thì
 cũng sẽ bị mất quyền write(w) do cơ chế bảo mật của hệ thống thế nên nếu chúng ta vẫn muốn kiên quyết muốn set permisions
 theo ý mình thì giải pháp là set giá trị umask để cho phép write cho others (umask(0000)) rồi mới open().
