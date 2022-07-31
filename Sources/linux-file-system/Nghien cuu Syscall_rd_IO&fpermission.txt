@@ -1,0 +1,24 @@
+1. Tại sao set file permission mode là 0777 nhưng khi check thì lại là 0775?
+Để chống lại việc ghi, thao tác thay đổi nội dung file bất kì định dạng nào trong hệ thống
+nên khi 1 file được tạo ra nó sẽ được set với những giá trị permision mặc định và sau đó &~ với mặt nạ (umask)
+để tránh tình trạng ghi file của những other users ngoài user và group.
+Nếu file có thực thi được thì có thêm quyền x.
+Không thì chỉ có wr.
+Và cũng chính vì lí do đó khi ta thực hiện lệnh system call open() mặc dù ta có set others full toàn quyền đi nữa thì
+cũng sẽ bị mất quyền write(w) do cơ chế bảo mật của hệ thống thế nên nếu chúng ta vẫn muốn kiên quyết muốn set permisions
+theo ý mình thì giải pháp là set giá trị umask để cho phép write cho others (umask(0000)) rồi mới open().
+>>>> PROBLEMS:
+Tuy nhiên, thì có một vấn đề khi chạy code nếu muốn tạo lại file với permision mong muốn thì phải xóa file cũ rồi chạy code
+để tạo file mới vì file mới tạo từ O_CREAT không chèn lên file cũ được.
+*BONUS:
+	Có thể dùng câu lệnh getfacl để xem ACL trên bất kỳ file hay đường dẫn directory nào.
+	ACL (Access Control List) cho phép chúng ta chỉnh permisions riêng của file hoặc directory mà không cần thiết
+	thay đổi quyền sở hữu và permisions.
+	Các ACL có giá trị mặc định thì umask sẽ bị bỏ qua, chẳng hạn khi ta tạo các file txt hoặc exe mà không dùng system call.
+	Ví dụ: Tạo file hello.txt ACL mặc định sẽ là: 0664 còn file exe ACL mặc định sẽ là: 0775. Tuy không có, mask nhưng vẫn đảm bảo
+	others không có khả năng thay đổi, ghi, chỉnh sửa file.
+	
+
+2. What's the difference between 0777 vs 777 file modes?
+ This link explain everything: https://digitalfortress.tech/php/difference-file-mode-0777-vs-777/
+

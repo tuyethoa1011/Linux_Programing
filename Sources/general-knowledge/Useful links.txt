@@ -1,0 +1,6 @@
+- Compiling a C program behind the scene:
+	https://www.geeksforgeeks.org/compiling-a-c-program-behind-the-scenes/
+- Shared Lib & Static Lib:
+	https://www.geeksforgeeks.org/difference-between-static-and-shared-libraries/
+	https://www.quora.com/What-is-the-difference-between-static-and-dynamic-linking
+
