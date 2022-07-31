@@ -36,8 +36,7 @@ int main(int argc, char *argv[])
 	//sb.stmode AND S_FMT to consider only the bits involved to determine file type
 	//S_IFMT is bit mask for file type (S_IFMT is type of file)
 	//st_mode contains the file type and permission mode
-	// Reference source: https://man7.org/linux/man-pages/man7/inode.7.html 
-	// for more details
+	// https://man7.org/linux/man-pages/man7/inode.7.html  for more details
 	switch(sb.st_mode & S_IFMT) {
 	case S_IFBLK:  printf("block device\n"); 	break;
 	case S_IFCHR:  printf("character device\n"); 	break;
