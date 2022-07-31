@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		printf("can not create file\n");
 	}
 	
-	//those if (2 if) to make sure that we just read infor of from 1 file only
+	//those if (2 if) to make sure that we just read infor from 1 file only
 	if (argc != 2) {
 		fprintf(stderr, "Usage: %s ./file-infor/file\n",argv[0]);
 		exit(EXIT_FAILURE); // unsucessful execution of a program then quit program
