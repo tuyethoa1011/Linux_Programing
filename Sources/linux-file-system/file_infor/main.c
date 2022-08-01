@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE); // unsucessful execution of a program then quit program
 	}
 	
-	//show up error when we couldn't find the file we want to read information
+	//show up error when we couldn't find the file we want to see file infor (That means the file doesn't exit or wrong directory)
 	if (lstat(argv[1],&sb) == -1) {
 		perror("lstat");
 		exit(EXIT_FAILURE);
