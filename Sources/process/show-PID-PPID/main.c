@@ -16,7 +16,7 @@ int main()
 			printf("My PID is: %d, my parent PID is: %d\n", getpid(), getppid());
 		} else {
 			printf("I'm parent process!\n");
-			printf("My PID is: %d\n",getpid());
+			printf("My PID is: %d,my parent PID is: %d\n",getpid(),getppid());
 			while(1);	
 		}	
 
