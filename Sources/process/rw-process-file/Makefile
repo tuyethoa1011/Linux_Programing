@@ -1,5 +1,3 @@
-
-
 all:
 	gcc main.c -o rw-file
 clean:
