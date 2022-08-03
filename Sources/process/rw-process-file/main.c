@@ -64,6 +64,8 @@ int main(int argc, char *argv[])
 	} else {
 		printf("ERROR! Failed to create child process\n");
 	}
+	close(fd1);
+	close(fd2);
 
 	return 0;
 }
