@@ -1,3 +1,2 @@
-https://stackoverflow.com/questions/32723398/can-a-child-process-wait-for-the-parent-process-to-terminate-in-linux-programmin#:~:text=Short%20answer%3A%20no.,nothing%20built%20in%20for%20that.
 https://www.quora.com/Why-does-%E2%80%9Cexit-status-0%E2%80%9D-mean-success
 https://www.ibm.com/docs/en/i/7.2?topic=ssw_ibm_i_72/apis/sigkill.htm
