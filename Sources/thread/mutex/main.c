@@ -57,7 +57,7 @@ static void *thr_handle1(void *argvs) //thread 1 dung de nhap lieu thong tin
 			fgets(data->date,sizeof(data->date),stdin);
 			printf("Home town: ");
 			fgets(data->hmtwn,sizeof(data->hmtwn),stdin);
-			fflush(stdin);
+		
 			++counter;
 		}
 
