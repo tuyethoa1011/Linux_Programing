@@ -222,7 +222,9 @@ int main(int argc,char*argvs[])
 		return -1;
 	}
 	
-
+	close(fd1);
+	close(fd2);
+	close(fd3);
 	pthread_join(threadid1,NULL);
 	pthread_join(threadid2,NULL);
 	pthread_join(threadid3,NULL);
