@@ -1,7 +1,6 @@
 /*Viet chuong trinh in ra thong diep bat ki khi nhan to hop phim
 CTRL + C. Dang ki action cho SIGSUR1 va SIGSUR2*/
 
-//BONUS: Thu dung SIGUSR de dinh nghia dang ky action bao SIGCHLD cho process cha
 #include<stdio.h>
 #include<signal.h>
 #include<stdlib.h>
