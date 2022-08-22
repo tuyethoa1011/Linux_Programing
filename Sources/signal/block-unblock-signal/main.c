@@ -40,6 +40,8 @@ int main(int argc,char *argv[])
 			printf("Please enter again! We just have 2 options\n");
 		}
 		if(temp == -50) { 
+			printf("ERROR! You attempts too many times\n");
+			printf("System have to stop program\n");
 			kill(getpid(),SIGQUIT);
 			exit(EXIT_FAILURE); //50 tries to enter option, still wrong?? then the program will be core dump
 		} 	
