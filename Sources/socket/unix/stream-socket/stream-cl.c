@@ -38,5 +38,5 @@ int main(int argc, char *argv[])
         printf ("Can't read anything from server\n");
     }
 
-    exit(EXIT_SUCCESS); //Close our socket,server see OEF*/
+    exit(EXIT_SUCCESS); //Close our socket
 }
