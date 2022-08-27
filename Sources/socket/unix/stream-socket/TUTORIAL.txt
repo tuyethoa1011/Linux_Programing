@@ -1,0 +1,10 @@
+Running execute file like this
+SERVER: ./server &
+CLIENT: ./client < filenamewithcontent
+
+then copy data SERVER recieve to another file
+./server > filename
+
+Final, use this command line to differentiate 2 files (File you use to send from client to server - File you receive from server)
+
+>>> diff filename filenamewithcontent
