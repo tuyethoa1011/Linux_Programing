@@ -1,8 +1,7 @@
 #include "idgram_sck.h"
 
 /*
- * Here I send a datagram to a receiver whose name I get from the
- * command line arguments.  The form of the command line is:
+ The form of the command line is:
  * <programname> <hostname> <portnumber>
  */
 
