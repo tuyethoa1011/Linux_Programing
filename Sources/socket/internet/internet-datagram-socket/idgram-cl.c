@@ -44,7 +44,7 @@ int main(int argc,char *argv[])
     printf("Client is ready");
 	
     memset(resp,0,sizeof(resp));
-	memset(buf,0,sizeof(buf));
+    memset(buf,0,sizeof(buf));
 
     printf("\nSend message to server: ");
     
