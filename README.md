@@ -4,6 +4,3 @@ All the sources is written on UNIX system so if you want to run these files you 
 
 By the way, you could use Vscode, Eclipse,... to compile sources code there then run file exe on Windows. But i'm not encouraging this option.
 
-#Author
-Ngo Le Tuyet Hoa
- 
